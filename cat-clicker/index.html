@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="nav.css"/>
+    <link rel="stylesheet" href="layout.css"/>
+    <title>Cat Clicker</title>
+  </head>
+  <body>
+    <header class="primary-header flex">
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation"></button>
+      <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+          <li class="active">
+                <a href="index.html">Home </a></li>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="index.html">Home </a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="title">
+      <h1>cat clicker</h1>
+    </div>
+      <div class ="container">
+      <div class ="item"><h2 id="numClicks">Click Count: <span id="clickCount">0</span></h2></div>
+      <div class ="cat-container item"><img class="catBase" id="catBase" src="cat-base.png" width="300" />
+      <img
+        class="cat"
+        id="cat"
+        src="cat.png"
+        width="300"
+        onclick="updateclickCount(catClicker)"
+      /></div>
+      <div class ="item"><br><h2>Assistants hired: <span id="assistantsPurchasedCount">0</span></h2></div>
+      <div class ="item"><p id="assistantsPurchased">
+        Each assistant helps you pet the cat, contributing one click per second. <br>Hire an assistant:
+        <button
+          type="button"
+          class="btn btn-reset disabled"
+          id="assistantButton"
+          work = "false"
+        >
+          Cost: <span id="assistantButtonCost"></span>
+        </button>
+      </p>
+    </div>
+    <div class ="item"><p>
+      <button type="button" class="btn" onclick="resetAll()">
+        Reset!
+      </button></p>
+      </div>
+    </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

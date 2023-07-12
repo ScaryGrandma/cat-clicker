@@ -1,0 +1,29 @@
+*{font-family: Arial, Helvetica, sans-serif;}
+
+.title{
+  background-color: rgb(212, 200, 188);
+  border-bottom: 1px solid rgb(32, 0, 71);
+}
+
+.squishCat {
+  animation: squish 0.2s;
+  transition: transform 100ms ease-in;
+  transition: transform 200ms ease-out; 
+}
+
+@keyframes squish {
+  50%{
+    -webkit-transform: scale(1.15,.85) translateY(15px);
+    transform: scale(1.15,.85) translateY(15px);
+  }
+}
+
+
+.btn{
+background-color: rgb(183, 252, 225);
+}
+
+.btn-reset:disabled {
+  background-color:rgb(183, 252, 225);
+  outline-style: none;
+}
